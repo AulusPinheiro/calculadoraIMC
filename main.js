@@ -6,7 +6,6 @@ function limparInput() {
 
 }
 
-
 function gerar() {
 
   var name = document.querySelector('#nome');
@@ -18,17 +17,23 @@ function gerar() {
   var nome = name.value;
   var altura = Number(alt.value);
   var peso = Number(pes.value);
-  
 
   var imc = parseFloat((peso / (altura * altura)));
 
 
-  if (nome.length == 0 || altura <= 0 || peso <= 0) {
+  if (nome.length == 0 || altura <= 0 ||peso <= 0) {
     alert("Informe valores corretos");
+    res.innerHTML = "";
+    tabela[0].style.backgroundColor = '#FFF';
+    tabela[1].style.backgroundColor = '#FFF';
+    tabela[2].style.backgroundColor = '#FFF';
+    tabela[3].style.backgroundColor = '#FFF';
+    tabela[4].style.backgroundColor = '#FFF';
+    tabela[5].style.backgroundColor = '#FFF';
+    tabela[6].style.backgroundColor = '#FFF';
     limparInput();
-  }
-
-  if (imc < 17) {
+  
+  } else if (imc < 17) {
 
     res.innerHTML = `Olá, ${nome}! Seu IMC é : ${imc.toFixed(2)} e está marcado na tabela`;
     tabela[0].style.backgroundColor = '#A0E7E5';

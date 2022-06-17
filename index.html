@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de IMC</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main>
+    <h1> Calculadora do Indice de Massa Corporal - IMC </h1>
+    <section>
+      <p class="texto"><b><i>Índice de Massa Corporal (IMC)</b></i> é uma medida internacional usada para calcular se uma pessoa está
+        no peso ideal. Sendo calculada dividindo-se o peso (em kg) pelo quadrado da altura (em metros). O resultado
+        revela se o peso está dentro da faixa ideal, abaixo ou acima do desejado.</p>
+      <table>
+        <tr>
+          <th>Resultado</th>
+          <th>Situação</th>
+        </tr>
+        <tr class="indices">
+          <td>Abaixo de 17</td>
+          <td>Muito abaixo do peso</td>
+        </tr>
+        <tr class="indices">
+        <td>Entre 17 e 18.49</td>
+        <td>Abaixo do peso</td>
+      </tr>
+        <tr class="indices">
+          <td>Entre 18.50 e 24.99 </td>
+          <td>Peso normal</td>
+        </tr>
+        <tr class="indices">
+          <td>Entre 25 e 29.99</td>
+          <td>Acima do peso</td>
+        </tr>
+        <tr class="indices">
+          <td>Entre 30 e 34.99</td>
+          <td>Obesidade I</td>
+        </tr>
+        <tr class="indices">
+          <td>Entre 35 e 39.99</td>
+          <td>Obesidade II (severa)</td>
+        </tr>
+        <tr class="indices">
+          <td>Acima de 40</td>
+          <td>Obesidade III (mórbida)</td>
+        </tr>
+      </table>
+      <p id="resultado"></p>
+      <label for="nome">Informe o seu nome: <input class="number" type="text" name="nome" id="nome"
+          placeholder="Ex.: Bábara" onfocus=""></label>
+      <label for="altura">Informe a sua altura <span> (em Metros)</span> <input class="number" type="number"
+          name="altura" id="altura" placeholder="Ex.: 1.74"></label>
+      <label for="peso">Informe o seu peso <span>(em Quilos)</span>: <input class="number" type="number" name="altura"
+          id="peso" placeholder="Ex.: 74"></label>
+
+      <button id="botao" onclick="gerar()">Gerar Resultado</button>
+   
+    </section>
+  </main>
+  <script src="/main.js"></script>
+</body>
+
+</html>
